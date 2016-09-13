@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+    <!DOCTYPE HTML>
+
+    <head>
+        <title>Concept</title>
+        <meta charset="utf-8">
+        <!-- Google Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+        <!-- CSS Files -->
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="menu/css/simple_menu.css">
+        <!-- Contact Form -->
+        <link href="contact-form/css/style.css" media="screen" rel="stylesheet" type="text/css">
+        <!-- JS Files -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script src="js/jquery.tools.min.js"></script>
+        <script src="cars.js"></script>
+        <script>
+            $(function() {
+                $("#prod_nav ul").tabs("#panes > div", {
+                    effect: 'fade',
+                    fadeOutSpeed: 400
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".pane-list li").click(function() {
+                    window.location = $(this).find("a").attr("href");
+                    return false;
+                });
+            });
+        </script>
+
+
+    </head>
+
+    <body>
+        <!-- Main Menu -->
+        <ol id="menu">
+            <li class="active_menu_item"><a href="index.html" style="color:#FFF">Home</a>
+                <!-- sub menu -->
+
+            </li>
+            <!-- end sub menu -->
+
+            <!-- end sub menu -->
+            <li><a href="contact.html" style="color:#FFF">Contact</a></li>
+        </ol>
+        <div id="container">
+            <div id="site_title">
+                <a href="shoppingcart.html">
+                    <img src="shoppingcart.png" width="50" height="36">
+                </a>
+            </div>
+
+
+            <table>
+                <div class="page">
+                    <header>
+                        <th>
+                            <center>
+                                <h1><u><b>Your Cart</b></u></h1></center>
+                        </th>
+                    </header>
+                    <ol>
+                        <tr>
+                            <td>
+                                <li><b>2017 Chevrolet Camaro</b>
+                                    </p>
+                                    <input type="number" id="a" placeholder="Input qunatity" min="0" max="10">
+                                    <button type="button" onclick="cashRegister.scan('Camaro', document.getElementById('a').value)">Add</button>
+                                    <p>Price: $26,305</p>
+                                </li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                <li><b>2016 Ford Mustang V6</b>
+                                    </p>
+                                    <input type="number" id="b" placeholder="Input qunatity" min="0" max="10">
+                                    <button type="button" onclick="cashRegister.scan('Mustang', document.getElementById('b').value)">Add</button>
+                                    <p>Price: $24,915</p>
+                                </li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <li><b>2016 Ford F-150</b>
+                                    </p>
+                                    <input type="number" id="c" placeholder="Input qunatity" min="0" max="10">
+                                    <button type="button" onclick="cashRegister.scan('F150', document.getElementById('c').value)">Add</button>
+                                    <p>Price: $26,540</p>
+                                </li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <li><b>2016 Chevy Silverado</b>
+                                    </p>
+                                    <input type="number" id="d" placeholder="Input qunatity" min="0" max="10">
+                                    <button type="button" onclick="cashRegister.scan('S	ilverado', document.getElementById('d').value)">Add</button>
+                                    <p>Price: $27,195</p>
+                                </li>
+                            </td>
+                        </tr>
+                    </ol>
+                    <tr>
+                        <td>
+                            <hr/>
+                            <button type="button" onclick="showTotal()">Show Total</button> <b><p id="total"></p></b>
+                </div>
+                </td>
+                </tr>
+            </table>
+
+    </body>
+
+</html>
